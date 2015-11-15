@@ -14,14 +14,12 @@ objectMap(_baseObj_, _callback_ [, _thisObject_]);
 
 _callback_ is a function that can accept up to three arguments:
 
-*value*
-The value for each property in _baseObj_
-
-*key* (optional)
-The key for each property in _baseObj_
-
-*baseObj* (optional)
-The _baseObj_
+**value**  
+The value for each property in _baseObj_  
+**key** (optional)  
+The key for each property in _baseObj_  
+**baseObj** (optional)  
+The _baseObj_  
 
 ### Usage
 
