@@ -29,10 +29,7 @@ var propertyMap = require('property-map');
 // ...or es2015
 import propertyMap from 'property-map';
 
-propertyMap(
-  {a: 4, b: 6, c: 3},
-  value => value + 1
-); // {a: 5, b: 7, c: 4}
+propertyMap({height: 4, width: 3}, x => x + 1); // {height: 5, width: 4}
 
 propertyMap(
   {a: 4, b: 6, c: 3},
