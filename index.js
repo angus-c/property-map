@@ -3,11 +3,12 @@ Object.defineProperty(exports, '__esModule', {
 });
 
 exports['default'] = function(obj, fn, ctxt) {
-  const result = {};
-  Object.keys(obj).forEach(function(key) {
-    result[key] = fn.call(ctxt, obj[key], key, obj);
-  });
-  return result;
+  return Object.keys(obj).reduce(
+    function(result, key) {
+      result[key] = fn.call(ctxt, obj[key], key, obj);
+      return result;
+    }, {}
+  );
 }
 
 module.exports = exports['default'];
