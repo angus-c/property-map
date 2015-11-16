@@ -1,42 +1,40 @@
-## object-map
+## property-map
 
 Apply a function to each property of an object
 
 ### Install
 
 ```
-npm install object-map
+npm install property-map
 ```
 
 ### API
 
-objectMap(_baseObj_, _callback_ [, _thisObject_]);
+propertyMap(_baseObj_, _callback_ [, _thisObject_]);
 
 _callback_ is a function that can accept up to three arguments:
 
-*value*
-The value for each property in _baseObj_
-
-*key* (optional)
-The key for each property in _baseObj_
-
-*baseObj* (optional)
-The _baseObj_
+**value**  
+The value for each property in _baseObj_  
+**key** (optional)  
+The key for each property in _baseObj_  
+**baseObj** (optional)  
+The _baseObj_  
 
 ### Usage
 
 ```js
 // commonJS...
-var objectMap = require('object-map');
+var propertyMap = require('property-map');
 // ...or es2015
-import objectMap from 'object-map';
+import propertyMap from 'property-map';
 
-objectMap(
+propertyMap(
   {a: 4, b: 6, c: 3},
   value => value + 1
 ); // {a: 5, b: 7, c: 4}
 
-objectMap(
+propertyMap(
   {a: 4, b: 6, c: 3},
   function(_, key) {return this[key]},
   {a: 1, c: 3}
